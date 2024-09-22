@@ -15,21 +15,15 @@ public class StudentController {
   @Autowired
   private StudentService studentService;
 
-  @PostMapping("/add")
-  public String add(@RequestBody Student student) {
-    studentService.saveStudent(student);
-    return "New student is added.";
-  }
-
   @GetMapping("/getAll")
-  public List<Student> getAll() {
+  public List<Student> list() {
     return studentService.getAllStudents();
   }
 
-  @DeleteMapping("/deleteByEntity")
-  public String deleteByEntity(@RequestBody Student student) {
-    studentService.deleteByEntity(student);
-    return "The student is deleted.";
+  @PostMapping("/addStudent")
+  public String add(@RequestBody Student student) {
+    studentService.saveStudent(student);
+    return "New student is added.";
   }
 
 }

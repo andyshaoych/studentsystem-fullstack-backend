@@ -9,6 +9,4 @@ public interface StudentService {
 
   public List<Student> getAllStudents();
 
-  public void deleteByEntity(Student student);
-
 }

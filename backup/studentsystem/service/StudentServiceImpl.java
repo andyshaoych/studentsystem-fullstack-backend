@@ -22,9 +22,4 @@ public class StudentServiceImpl implements StudentService {
   public List<Student> getAllStudents() {
     return studentRepository.findAll();
   }
-
-  @Override
-  public void deleteByEntity(Student student) {
-    studentRepository.delete(student);
-  }
 }
